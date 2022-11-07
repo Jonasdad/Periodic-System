@@ -31,6 +31,14 @@ public class periodicSystem {
         }
     }
 
+    public void PracticeAtomicNumbers(){
+        Random rnd = new Random();
+        System.out.println("what is the atomic number of " + elementArray[rnd.nextInt(118)].elementName);
+
+        System.out.println("");
+        
+    }
+
     public void practiceSymbol(){
         Random rnd = new Random();
         Scanner input = new Scanner(System.in);
