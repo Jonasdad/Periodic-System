@@ -11,8 +11,4 @@ public class Element{
         this.atomicMass = atomicMass;
         this.metalOrNah = metalOrNah; 
     }
-
-
-    
-    
 }

@@ -1,5 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.Random;
+import java.util.Scanner;
 public class periodicSystem {
 
     Element elementArray[] = new Element[118];
@@ -28,7 +30,33 @@ public class periodicSystem {
             System.out.println(e);
         }
     }
-    public void printPS(periodicSystem test){
+
+    public void practiceSymbol(){
+        Random rnd = new Random();
+        Scanner input = new Scanner(System.in);
+        Integer randomized = rnd.nextInt(118);
+        System.out.println("What is the Symbol for " + elementArray[randomized].elementName);
+        Integer i = 0;
+        while(i < 3){
+            String answer = input.nextLine();
+            if(elementArray[randomized].symbol.equalsIgnoreCase(answer)){
+                System.out.println("Correct!");
+                break;
+            }
+            else{
+                System.out.println("Incorrect! Please try again\n" + "Tries left " + (2-i));
+                i++;
+            }    
+        }
+        System.out.println("The correct answer was " + elementArray[randomized].symbol);
+    }
+
+
+
+
+
+
+    public void print(periodicSystem test){
         System.out.println("Atomic Number, Symbol, Element Name, Atomic Mass, Metal?");
         for(int i = 0; i < 118; i++){
             System.out.print(i+1+ " ");
