@@ -50,12 +50,7 @@ public class periodicSystem {
         }
         System.out.println("The correct answer was " + elementArray[randomized].symbol);
     }
-
-
-
-
-
-
+    
     public void print(periodicSystem test){
         System.out.println("Atomic Number, Symbol, Element Name, Atomic Mass, Metal?");
         for(int i = 0; i < 118; i++){
