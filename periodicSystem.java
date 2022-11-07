@@ -1,6 +1,5 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.Random;
 public class periodicSystem {
 
     Element elementArray[] = new Element[118];
@@ -29,26 +28,6 @@ public class periodicSystem {
             System.out.println(e);
         }
     }
-
-
-
-
-
-
-
-
-
-
-    public void PracticeAtomicNumbers(){
-        Random rnd = new Random();
-        System.out.println("what is the atomic number of " + elementArray[rnd.nextInt(118)].elementName);
-
-        System.out.println("");
-        
-    }
-
-
-
     public void printPS(periodicSystem test){
         System.out.println("Atomic Number, Symbol, Element Name, Atomic Mass, Metal?");
         for(int i = 0; i < 118; i++){
