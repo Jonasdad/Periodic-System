@@ -14,7 +14,8 @@ public class promt {
                 Integer option = input.nextInt();
                 switch(option){
                     case 1:
-                        System.out.println("Display periodic table\n");
+                        periodicSystem test = new periodicSystem("periodicSystem.csv");
+                        test.printPS(test);
                         break;
                     case 2:
                         System.out.println("--ADD FUNCTIONALITY TO PRACTICE SYMBOLS\n");

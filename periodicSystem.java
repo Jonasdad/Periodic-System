@@ -1,8 +1,9 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 public class periodicSystem {
+
+    Element elementArray[] = new Element[118];
     public periodicSystem(String file) {
-        Element elementArray[] = new Element[118];
         int i = 0;
         
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
@@ -25,6 +26,16 @@ public class periodicSystem {
 
         } catch (Exception e) {
             System.out.println(e);
+        }
+    }
+    public void printPS(periodicSystem test){
+        System.out.println("Atomic Number, Symbol, Element Name, Atomic Mass, Metal?");
+        for(int i = 0; i < 118; i++){
+            System.out.print(i+1+ " ");
+            System.out.print(test.elementArray[i].symbol+" ");
+            System.out.print(test.elementArray[i].elementName+" ");
+            System.out.print(test.elementArray[i].atomicMass+" ");
+            System.out.print(test.elementArray[i].metalOrNah+" "+"\n");
         }
     }
 }
