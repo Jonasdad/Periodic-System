@@ -1,5 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.Random;
+import java.util.Scanner;
 public class periodicSystem {
 
     Element elementArray[] = new Element[118];
