@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.*;
 public class periodicSystem {
 
     Element elementArray[] = new Element[118];
@@ -37,6 +38,7 @@ public class periodicSystem {
         Integer i = 0;
         while(i < 3){
             String answer = input.nextLine();
+
             if(elementArray[randomized].symbol.equalsIgnoreCase(answer)){
                 System.out.println("Correct!");
                 break;
@@ -47,6 +49,27 @@ public class periodicSystem {
             }    
         }
         System.out.println("The correct answer was " + elementArray[randomized].symbol);
+    }
+
+    public void practiceAtomicNumber(){
+        Random rnd = new Random();
+        Scanner input = new Scanner(System.in);
+        Integer random = rnd.nextInt(118);
+        System.out.println("What element has atomic number " + random);
+        Integer i = 0;
+        while(i < 3){
+            String answer = input.nextLine();
+
+            if(elementArray[random-1].elementName.equalsIgnoreCase(answer) || elementArray[random-1].symbol.equalsIgnoreCase(answer)){
+                System.out.println("Correct!");
+                break;
+            }
+            else{
+                System.out.println("Incorrect! Please try again\n" + "Tries left " + (2-i));
+                i++;
+            }
+        }
+        System.out.println("The correct answer was " + elementArray[random-1].elementName +", " + elementArray[random-1].symbol);
     }
     
     public void print(periodicSystem test){

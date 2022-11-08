@@ -8,7 +8,7 @@ public class promt {
             Scanner input = new Scanner(System.in);
             System.out.println("************Welcome to Periodic Table Practice************");
             System.out.printf("\t\tWhat would you like to do?\n");
-            System.out.printf("\t\t1. Show perodic table\n\t\t2. Practice beteckningar\n\t\t3. Practice Atomic Masses\n\t\t4. Quit");
+            System.out.printf("\t\t1. Show perodic table\n\t\t2. Practice Symbols\n\t\t3. Practice Atomic Numbers\n\t\t4. Random Tasks\n\t\t5. Quit");
             System.out.printf("\n----------------------------------------------------------\n");
             periodicSystem test = new periodicSystem("periodicSystem.csv");
             try{
@@ -21,10 +21,17 @@ public class promt {
                         test.practiceSymbol();
                         break;
                     case 3:
-                        System.out.println("--ADD FUNCTIONALTY TO PRACTICE ATOMIC NUMBER GIVEN AN ELEMENT\n");
+                        test.practiceAtomicNumber();
                         break;
                     case 4:
-                        System.out.println("--ADD FUNCTIONALITY FOR ATOMIC NUMBER GIVEN ATOMIC MASS");
+                        Random rnd = new Random();
+                        Integer rand = rnd.nextInt(2);
+                        if(rand.equals(1)){
+                            test.practiceSymbol();
+                        }
+                        else{
+                            test.practiceAtomicNumber();
+                        }
                         break;
                     case 5:
                         System.out.println("Exiting Program. Good Bye\n");
